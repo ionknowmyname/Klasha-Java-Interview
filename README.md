@@ -56,3 +56,8 @@ https://github.com/ionknowmyname/Drone-Service-2
 - For currency conversion, it could go both ways i.e the source could be interchanged with the target. E.g if
 50 naira = $1, then $1 = 50 naira; except that in real life, exchange rate is not the same for backwards and 
 forward for currency pairs, so I implemented one-way, source to target
+
+
+## EXTRAS
+
+- I added my postman collection to the root directory
