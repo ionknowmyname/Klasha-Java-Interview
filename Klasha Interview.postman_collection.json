@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "1ca80f27-db4b-4524-8ac6-5673d6f67690",
+		"name": "Klasha Interview",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14117533"
+	},
+	"item": [
+		{
+			"name": "GET Top N  Populated Cities",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/population?N=5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"population"
+					],
+					"query": [
+						{
+							"key": "N",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Country Details",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"limit\": 10,\n\t\"order\": \"asc\",\n\t\"orderBy\": \"population\",\n\t\"country\": \"ghana\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/country?country=nigeria",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"country"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "nigeria"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Country Cities & States",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"limit\": 10,\n\t\"order\": \"asc\",\n\t\"orderBy\": \"population\",\n\t\"country\": \"ghana\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/country/all?country=nigeria",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"country",
+						"all"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "nigeria"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Country Currency Converter from CSV",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/convert?country=italy&amount=2&targetCurrency=NGN",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"convert"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "italy"
+						},
+						{
+							"key": "amount",
+							"value": "2"
+						},
+						{
+							"key": "targetCurrency",
+							"value": "NGN"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
